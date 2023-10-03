@@ -1,0 +1,30 @@
+ALGORITHM renvoir_long_phrase
+VAR
+   phrase, voy : CHAR
+   l_p, nb_mot, nb_vo, i, j :INTEGER 
+BEGIN
+    write("Veillez saisir une phrase :")
+    lire (phrase)
+    l_p := len(phrase)
+    /*Le nombre de mots dans la phrase */
+    nb_mot := 0
+    FOR i FROM 1 TO l_p STEP 1  DO
+        IF (mid(phrase, i, 1)="") THEN
+            nb_mot := nb_mot +1
+        END_IF
+        i suivant
+    END_FOR
+    /*Le nombre de voyelles dans la phrase.*/
+    nb_vo := 0
+    voy := "aeiouy"
+    FOR j FROM 1 TO l_p STEP 1  DO
+        IF find ((voy, mid(phrase, i, 1))) <> 0 THEN
+            nb_vo := nb_vo + 1
+        END_IF
+        j suivant
+    END_FOR
+    /*L'affichage des traitement */
+    write("La longueur de la phrase est de :", l_g+1)
+    write("Cette phrase compte ", nb_mot + 1, " mots")
+    write( "Cette phrase compte ", nb_vo, " voyelles")
+END
